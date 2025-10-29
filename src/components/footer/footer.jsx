@@ -19,7 +19,7 @@ export default function Footer() {
   const { data: settings } = useGetSettingsQuery();
   // const sellerHref = isLoggedIn ? "/sr" : "/auth/login";
 
-  const sellerHref = "https://AYravel-admin-panel-gamma.vercel.app/auth/login";
+  const sellerHref = "https://admin.ayravel.com/auth/login";
 
   return (
     <footer className="bg-gray-50 py-12 px-6">
@@ -211,7 +211,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://AYravel-admin-panel-gamma.vercel.app/auth/login"
+                  href="https://admin.ayravel.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-black transition-colors"
