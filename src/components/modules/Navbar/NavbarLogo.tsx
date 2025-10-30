@@ -15,13 +15,13 @@ const NavbarLogo = () => {
         {settings?.logo ? (
           <Image
             src={settings.logo}
-            alt="AYravel Logo"
+            alt="AYraveL Logo"
             width={120}
             height={40}
             className="h-8 w-auto"
           />
         ) : (
-          <span className="text-xl font-bold">AYravel</span>
+          <span className="text-xl font-bold">AYraveL</span>
         )}
       </Link>
     </div>

@@ -169,7 +169,7 @@ src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.2!2d90.445023533
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="AYravel Location - Kazla, Dhaka, Bangladesh"
+            title="AYraveL Location - Kazla, Dhaka, Bangladesh"
           />
         </div>
         <div className="bg-background flex items-center justify-center p-4 mt-8">

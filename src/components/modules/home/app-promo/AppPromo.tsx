@@ -11,7 +11,7 @@ const AppPromo = () => {
       {/* Left Content */}
       <div className="max-w-lg">
         <p className="text-[10px] md:text-lg lg:text-xl text-secondary/70">
-          The AYravel App
+          The AYraveL App
         </p>
         <h2 className="text-sm md:text-2xl lg:text-3xl font-semibold md:mt-2 text-secondary">
           Share your ideas & shop <br /> endless Inspiration
@@ -45,7 +45,7 @@ const AppPromo = () => {
         h-[127px] md:h-[282px] lg:h-[354px]"
         >
           <Image
-            src="/AYravelmobileapp.png"
+            src="/AYraveLmobileapp.png"
             alt="App Mockup"
             fill
             className="object-contain"
