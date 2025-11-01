@@ -128,11 +128,13 @@ export default function Navbar() {
                 {settings?.logo ? (
                   <Image
                     src={settings.logo}
-                    alt="AYraveL Logo"
-                    width={120}
-                    height={40}
-                    className="h-10"
-                    style={{ width: 'auto' }}
+
+                    alt="AYravel Logo"
+                    width={18}
+                    height={10}
+                    className="w-16"
+                    style={{ height: 'auto' }}
+
                   />
                 ) : (
                   <span className="font-extrabold text-3xl text-primary">

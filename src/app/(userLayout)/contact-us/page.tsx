@@ -33,13 +33,13 @@ export default function ContactUs() {
         {/* Left card over image */}
         <div className="relative">
           <Image
-            src="/about1.jpg"
+            src="/logo.jpeg"
             alt="Background"
             width={600}
             height={650}
             className="object-cover rounded-xl w-full h-[400px] lg:h-[500px]"
           />
-          <Card className="absolute top-28 left-4  md:left-18 w-[300px] rounded-2xl p-6 bg-white/80 backdrop-blur-md border border-white/30 shadow-xl">
+          <Card className="absolute top-28 left-4  md:left-18 w-[300px] rounded-2xl p-6 bg-white/80 backdrop-blur-xs border border-white/30 shadow-xl">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-center text-black">
                 Come See Us
@@ -162,14 +162,15 @@ export default function ContactUs() {
         </div>
         <div className="w-full h-[400px] rounded-xl overflow-hidden shadow-lg">
           <iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3653.2!2d90.44502353307519!3d23.705463255761696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDQyJzE5LjciTiA5MMKwMjYnNDIuMSJF!5e0!3m2!1sen!2sbd!4v1234567890123!5m2!1sen!2sbd"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26236.01895440094!2d90.32108076863612!3d23.81046437885253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c0c1c61277db%3A0xc7d18838730e2e59!2sMirpur%2C%20Dhaka%2C%20Bangladesh!5e1!3m2!1sen!2sus!4v1762024539183!5m2!1sen!2sus"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="AYraveL Location - Kazla, Dhaka, Bangladesh"
+            title="AYravel Location - Mirpur, Dhaka, Bangladesh"
+
           />
         </div>
         <div className="bg-background flex items-center justify-center p-4 mt-8">

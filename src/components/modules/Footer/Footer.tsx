@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="col-span-2">
             <div className="relative w-40 h-16">
               <Image 
-                src={settings?.logo || "/logo.png"} 
+                src={settings?.logo || "/logo.jpeg"} 
                 alt="logo" 
                 fill 
                 className="object-contain"

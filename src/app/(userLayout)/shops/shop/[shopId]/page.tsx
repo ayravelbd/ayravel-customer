@@ -15,7 +15,6 @@ export default function ShopPage() {
   // fetch single shop data
   const { data: shopData, isLoading, isError } = useGetSingleShopQuery(shopId);
 
-  // console log for debugging
   useEffect(() => {}, [shopData]);
 
   const products = shopData?.products || [];

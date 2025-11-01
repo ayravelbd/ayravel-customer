@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook} from "lucide-react";
+import { Facebook, Linkedin} from "lucide-react";
 import { useAppSelector } from "@/redux/hooks";
 import { selectCurrentUser } from "@/redux/featured/auth/authSlice";
 import { useGetSettingsQuery } from "@/redux/featured/settings/settingsApi";
@@ -82,9 +82,23 @@ export default function Footer() {
                           <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                         </svg>
                       </div>
-                      AYraveL YouTube Channel
+                      AYravel YouTube
+
                     </a>
                   )}
+                  
+                    <a
+                      href="https://www.linkedin.com/in/aysha-khanam-7b4794366/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-700 transition-colors"
+                    >
+                      <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
+                        <Linkedin className="w-3 h-3 text-white" />
+                      </div>
+                      AYravel LinkedIn
+                    </a>
+                  
                 </div>
               </div>
 
@@ -187,7 +201,7 @@ export default function Footer() {
                     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                   </svg>
                   <span className="text-gray-500">
-                    {settings?.contactAndSocial?.address || 'Kazla, Dhaka, Bangladesh'}
+                    {settings?.contactAndSocial?.address || 'Mirpur, Dhaka, Bangladesh'}
                   </span>
                 </div>
               </li>

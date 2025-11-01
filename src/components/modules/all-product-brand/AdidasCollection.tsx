@@ -13,8 +13,6 @@ export default function AdidasCollection() {
   // Get products from Redux
   const products = useAppSelector(selectAllProducts);
 
-  // Console log raw data
-
   if (!products.length)
     return <p className="text-center py-4">Loading products...</p>;
 
