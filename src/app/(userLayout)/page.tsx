@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import ClientHome from "@/components/home/ClientHome";
 
 export const metadata: Metadata = {
-  title: "AYravel - Best Deals | Home",
+  title: "AYraveL - Best Deals | Home",
   description: "Premium Clothing & more in Bangladesh.",
 };
 

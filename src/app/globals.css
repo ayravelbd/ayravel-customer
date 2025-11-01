@@ -54,7 +54,7 @@
 :root {
   --radius: 0.625rem;
   
-  /* AYravel Color Palette */
+  /* AYraveL Color Palette */
   --primary: #FACF35;
   --primary-hover: #E6BD2E;
   --secondary: #2E2E2E;
@@ -101,7 +101,7 @@
 }
 
 .dark {
-  /* AYravel Dark Mode Colors */
+  /* AYraveL Dark Mode Colors */
   --background: #2E2E2E;
   --foreground: #FFFFFF;
   --card: #2A2A2A;

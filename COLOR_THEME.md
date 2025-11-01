@@ -1,4 +1,4 @@
-# 🎨 AYravel Color Palette Implementation (v2 – Based on #FACF35)
+# 🎨 AYraveL Color Palette Implementation (v2 – Based on #FACF35)
 
 ## Color Palette Overview
 

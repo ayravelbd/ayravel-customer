@@ -20,12 +20,14 @@ const FALLBACK: Slide[] = [
     _id: "f1", 
     imageUrl: "",
     alt: "AYravel Banner", 
+
     href: "/products/footwear" 
   },
   { 
     _id: "f2", 
     imageUrl: "",
     alt: "AYravel Banner", 
+
     href: "/products/new" 
   },
 ];

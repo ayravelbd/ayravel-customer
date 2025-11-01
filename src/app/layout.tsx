@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AYravel",
+  title: "AYraveL",
   description: "Vendor management website",
 };
 
