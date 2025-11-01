@@ -11,10 +11,6 @@ import { useGetDashboardQuery } from "@/redux/featured/dashboard/dashboardApi";
 export default function Dashboard() {
   const { data, isLoading, isError, error } = useGetDashboardQuery();
 
-  // Console log the fetched data
-
-  
-
   if (isLoading) return <p className="p-6 text-sm">Loading dashboard...</p>;
   if (isError) return <p className="p-6 text-sm text-red-600">Error: {JSON.stringify(error)}</p>;
 

@@ -206,7 +206,7 @@ export default function ProductListing() {
     isFetching,
   } = useGetPaginatedProductsQuery({ 
     page: currentPage, 
-    limit: 10,
+    limit: 20,
     search: searchQuery 
   });
 
@@ -216,11 +216,6 @@ export default function ProductListing() {
   const hasNextPage = paginatedData?.pagination?.hasNextPage || false;
   const totalItems = paginatedData?.pagination?.totalItems || 0;
   
-  // Debug logging
-  console.log('Paginated Data:', paginatedData);
-  console.log('API Products:', apiProducts);
-  console.log('Has Next Page:', hasNextPage);
-  console.log('Total Items:', totalItems);
   // categories from API
   const { data: apiCategories } = useGetAllCategoryQuery();
 

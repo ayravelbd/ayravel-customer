@@ -18,13 +18,13 @@ type Slide = {
 const FALLBACK: Slide[] = [
   { 
     _id: "f1", 
-    imageUrl: "/about2.jpg",
+    imageUrl: "",
     alt: "AYravel Banner", 
     href: "/products/footwear" 
   },
   { 
     _id: "f2", 
-    imageUrl: "/about2.jpg",
+    imageUrl: "",
     alt: "AYravel Banner", 
     href: "/products/new" 
   },
