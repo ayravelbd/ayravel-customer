@@ -4,6 +4,7 @@ import Providers from "@/lib/providers";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import { AuthProvider } from "@/provider/AuthProvider";
+import FacebookPixelWrapper from "@/components/FacebookPixelWrapper";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +30,13 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-         cz-shortcut-listen="true"
+        cz-shortcut-listen="true"
       >
         <AuthProvider>
           <Providers>
             {children}
             <Toaster position="top-right" />
+            <FacebookPixelWrapper />
           </Providers>
         </AuthProvider>
       </body>

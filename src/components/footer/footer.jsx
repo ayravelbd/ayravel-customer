@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Linkedin} from "lucide-react";
+import { Facebook, Instagram, Linkedin} from "lucide-react";
 import { useAppSelector } from "@/redux/hooks";
 import { selectCurrentUser } from "@/redux/featured/auth/authSlice";
 import { useGetSettingsQuery } from "@/redux/featured/settings/settingsApi";
@@ -17,9 +17,7 @@ export default function Footer() {
   const currentUser = useAppSelector(selectCurrentUser);
   const isLoggedIn = Boolean(currentUser?.id);
   const { data: settings } = useGetSettingsQuery();
-  // const sellerHref = isLoggedIn ? "/sr" : "/auth/login";
 
-  const sellerHref = "https://admin.AYraveL.com/auth/login";
 
   return (
     <footer className="bg-gray-50 py-12 px-6">
@@ -37,7 +35,9 @@ export default function Footer() {
                   className="h-10 w-auto mb-1"
                 />
               ) : (
-                <h2 className="text-2xl font-bold text-[#facf35] mb-1">AYraveL</h2>
+                <h2 className="text-2xl font-bold text-[#facf35] mb-1">
+                  AYraveL
+                </h2>
               )}
               <p className="text-sm text-gray-600 mb-6">
                 Connect with our social media platforms
@@ -48,24 +48,24 @@ export default function Footer() {
                 <div className="text-sm font-medium text-gray-700 mb-2">
                   Follow Us:
                 </div>
-                <div className="flex flex-col gap-2">
-                  {settings?.contactAndSocial?.facebookUrl?.map((url, index) => {
-                    const labels = ['AYraveL Facebook Page', 'AYraveL Facebook Page', 'AYraveL Facebook Page'];
-                    return (
-                      <a
-                        key={index}
-                        href={url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
-                      >
-                        <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                          <Facebook className="w-4 h-4 text-white" />
-                        </div>
-                        {labels[index] || `Facebook Page ${index + 1}`}
-                      </a>
-                    );
-                  })}
+                <div className="flex items-center gap-3 mt-4">
+                  {settings?.contactAndSocial?.facebookUrl?.map(
+                    (url, index) => {
+                      return (
+                        <a
+                          key={index}
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-600 transition-colors"
+                        >
+                          <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                            <Facebook className="w-4 h-4 text-white" />
+                          </div>
+                        </a>
+                      );
+                    }
+                  )}
                   {settings?.contactAndSocial?.youtubeUrl?.[0] && (
                     <a
                       href={settings.contactAndSocial.youtubeUrl[0]}
@@ -82,23 +82,31 @@ export default function Footer() {
                           <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                         </svg>
                       </div>
-                      AYravel YouTube
-
                     </a>
                   )}
-                  
+                  {settings?.contactAndSocial?.instagramUrl?.[0] && (
                     <a
-                      href="https://www.linkedin.com/in/aysha-khanam-7b4794366/"
+                      href={settings.contactAndSocial.instagramUrl[0]}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-700 transition-colors"
+                      className="flex items-center gap-2 text-sm text-gray-600 hover:text-red-600 transition-colors"
                     >
-                      <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
-                        <Linkedin className="w-3 h-3 text-white" />
+                      <div className="w-6 h-6 bg-red-600 rounded-full flex items-center justify-center">
+                        <Instagram className="w-3 h-3 text-white" />
                       </div>
-                      AYravel LinkedIn
                     </a>
-                  
+                  )}
+
+                  <a
+                    href="https://www.linkedin.com/in/aysha-khanam-7b4794366/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-gray-600 hover:text-blue-700 transition-colors"
+                  >
+                    <div className="w-6 h-6 bg-blue-700 rounded-full flex items-center justify-center">
+                      <Linkedin className="w-3 h-3 text-white" />
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -127,18 +135,27 @@ export default function Footer() {
             <h3 className="font-semibold text-black mb-4">About</h3>
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
-                <Link href="/faqs-page" className="hover:text-black transition-colors">
+                <Link
+                  href="/faqs-page"
+                  className="hover:text-black transition-colors"
+                >
                   FAQ
                 </Link>
               </li>
-              
-               <li>
-                <Link href="/return-policy" className="hover:text-black transition-colors">
+
+              <li>
+                <Link
+                  href="/return-policy"
+                  className="hover:text-black transition-colors"
+                >
                   {settings?.returnPolicy?.title || 'Return & Exchange'}
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="hover:text-black transition-colors">
+                <Link
+                  href="/privacy-policy"
+                  className="hover:text-black transition-colors"
+                >
                   {settings?.privacyPolicy?.title || 'Privacy Policy'}
                 </Link>
               </li>
@@ -147,7 +164,6 @@ export default function Footer() {
                   Search
                 </a>
               </li>
-             
             </ul>
           </div>
 
@@ -157,11 +173,17 @@ export default function Footer() {
             <ul className="space-y-2 text-sm text-gray-600">
               <li>
                 <a
-                  href={`mailto:${settings?.contactAndSocial?.email || 'AYraveLbd@gmail.com'}`}
+                  href={`mailto:${
+                    settings?.contactAndSocial?.email || 'AYraveLbd@gmail.com'
+                  }`}
                   className="hover:text-black transition-colors flex items-center gap-2"
                 >
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                  <svg
+                    className="w-4 h-4"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
                   </svg>
                   {settings?.contactAndSocial?.email || 'AYraveLbd@gmail.com'}
                 </a>
@@ -169,14 +191,20 @@ export default function Footer() {
               <li>
                 <a
                   href={(() => {
-                    const whatsappLink = settings?.contactAndSocial?.whatsappLink?.[0];
-                    const phone = settings?.contactAndSocial?.phone || '+88019090008004';
-                    
+                    const whatsappLink =
+                      settings?.contactAndSocial?.whatsappLink?.[0];
+                    const phone =
+                      settings?.contactAndSocial?.phone || '+88019090008004';
+
                     // If whatsappLink exists and is a proper URL, use it
-                    if (whatsappLink && (whatsappLink.startsWith('https://wa.me/') || whatsappLink.startsWith('https://api.whatsapp.com/'))) {
+                    if (
+                      whatsappLink &&
+                      (whatsappLink.startsWith('https://wa.me/') ||
+                        whatsappLink.startsWith('https://api.whatsapp.com/'))
+                    ) {
                       return whatsappLink;
                     }
-                    
+
                     // Otherwise, create proper WhatsApp URL from phone number
                     const cleanPhone = phone.replace(/[^0-9]/g, ''); // Remove non-numeric characters
                     return `https://wa.me/${cleanPhone}`;
@@ -197,11 +225,16 @@ export default function Footer() {
               </li>
               <li className="text-sm">
                 <div className="flex items-start gap-2">
-                  <svg className="w-4 h-4 mt-0.5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  <svg
+                    className="w-4 h-4 mt-0.5 text-gray-500"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                   </svg>
                   <span className="text-gray-500">
-                    {settings?.contactAndSocial?.address || 'Mirpur, Dhaka, Bangladesh'}
+                    {settings?.contactAndSocial?.address ||
+                      'Mirpur, Dhaka, Bangladesh'}
                   </span>
                 </div>
               </li>
@@ -212,14 +245,19 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-black mb-4">Shop</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              
-               <li>
-                <a href="/product-listing" className="hover:text-black transition-colors">
+              <li>
+                <a
+                  href="/product-listing"
+                  className="hover:text-black transition-colors"
+                >
                   Shop
                 </a>
               </li>
               <li>
-                <Link href="/tracking-order" className="hover:text-black transition-colors">
+                <Link
+                  href="/tracking-order"
+                  className="hover:text-black transition-colors"
+                >
                   Track Your Order
                 </Link>
               </li>
@@ -233,8 +271,6 @@ export default function Footer() {
                   AYraveL Admin
                 </a>
               </li>
-              
-             
             </ul>
           </div>
 
@@ -242,14 +278,16 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-black mb-4">Our Information</h3>
             <ul className="space-y-2 text-sm text-gray-600">
-              
               <li>
                 <a href="/about" className="hover:text-black transition-colors">
                   About Us
                 </a>
               </li>
               <li>
-                <a href="/contact-us" className="hover:text-black transition-colors">
+                <a
+                  href="/contact-us"
+                  className="hover:text-black transition-colors"
+                >
                   Contact Us
                 </a>
               </li>
@@ -260,7 +298,8 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-12  pt-8 border-t border-gray-200 text-center">
           <p className="text-sm text-gray-500 mb-4 ">
-            © {new Date().getFullYear()} AYraveL Ltd. All rights reserved - Design &amp; Developed by <span className="text-md">WebQ Team</span> 
+            © {new Date().getFullYear()} AYraveL Ltd. All rights reserved -
+            Design &amp; Developed by <span className="text-md">WebQ Team</span>
           </p>
         </div>
       </div>

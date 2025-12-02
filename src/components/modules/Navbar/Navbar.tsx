@@ -129,7 +129,7 @@ export default function Navbar() {
                   <Image
                     src={settings.logo}
 
-                    alt="AYravel Logo"
+                    alt="AYraveL Logo"
                     width={18}
                     height={10}
                     className="w-16"

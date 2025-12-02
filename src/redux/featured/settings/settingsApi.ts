@@ -25,6 +25,10 @@ export interface ISettings {
   popupDelay: number;
   popupImage?: string;
   sliderImages: string[];
+  facebookPixel: {
+    isEnabled: boolean;
+    pixelId: string;
+  };
   logo?: string;
   createdAt: string;
   updatedAt: string;

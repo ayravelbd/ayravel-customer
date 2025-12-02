@@ -169,7 +169,7 @@ export default function ContactUs() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="AYravel Location - Mirpur, Dhaka, Bangladesh"
+            title="AYraveL Location - Mirpur, Dhaka, Bangladesh"
 
           />
         </div>

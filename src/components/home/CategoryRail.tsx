@@ -54,25 +54,7 @@ export default function CategoryRail() {
 
   return (
     <section className="w-full">
-      <div className="mb-2 flex items-center justify-between px-1">
-        <h3 className="font-semibold text-base md:text-lg text-secondary">Browse by Category</h3>
-        <div className="hidden md:flex gap-2">
-          <button 
-            onClick={() => scrollBy(-240)} 
-            className="w-8 h-8 flex items-center justify-center rounded-full border border-neutral hover:bg-section transition-colors text-secondary"
-            aria-label="Previous categories"
-          >
-            ‹
-          </button>
-          <button 
-            onClick={() => scrollBy(240)} 
-            className="w-8 h-8 flex items-center justify-center rounded-full border border-neutral hover:bg-section transition-colors text-secondary"
-            aria-label="Next categories"
-          >
-            ›
-          </button>
-        </div>
-      </div>
+      
 
       <div ref={railRef} className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin">
         <button
